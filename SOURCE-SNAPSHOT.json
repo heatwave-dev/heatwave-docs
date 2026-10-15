@@ -1,0 +1,13 @@
+{
+  "scope": "exact_public_contract_source_snapshot",
+  "reviewDate": "2026-10-15",
+  "sourceFile": "reserve-program.rs",
+  "sourceSha256": "8b8ff26c0c5671af2b2b1a29bc724e0f62a7a8a7f3841c9ed10e0b28b93253cc",
+  "deployedElfSha256": "534f800c9c68c572dc8afb45103c9afce7ab3d8af272936b43cd04452014add3",
+  "deployedElfBytes": 210168,
+  "independentReproducibleBuildVerified": false,
+  "notes": "Contract and build/test files are exact copies from the project workspace. Source hash and deployed ELF hash identify different artifacts; this snapshot is not an independent reproducible-build audit.",
+  "archive": "contract-source.zip",
+  "archiveSourceFile": "contract/src/lib.rs",
+  "originalSourceLayout": "src/lib.rs within the contract directory"
+}
