@@ -55,7 +55,7 @@ Removing upgrade authority prevents replacement of this program's executable cod
 
 ```mermaid
 flowchart LR
-  Buyer[Player buying boxes or equipment] -->|HTW price| Reserve[Protected HTW reserve]
+  Buyer[Player buying boxes, equipment or upgrades] -->|HTW price| Reserve[Protected HTW reserve]
   Market[Market purchase] -->|90 percent HTW| Seller[Seller wallet]
   Market -->|10 percent HTW| Reserve
   Reserve -->|97 percent of gross claim| Player[Claiming player]
@@ -64,7 +64,7 @@ flowchart LR
   Player -->|0.0025 SOL per claim| Revenue
 ```
 
-The operator can spend funds already received in the revenue accounts. It cannot use that revenue wallet's private key to directly withdraw the reserve's deposited HTW. The 3% claim fee leaves the reserve only as part of a successful claim; it is not a standing allowance to extract 3% of all deposited tokens. Market fees replenish the reserve, not the revenue wallet.
+The operator can spend funds already received in the revenue accounts. It cannot use that revenue wallet's private key to directly withdraw the reserve's deposited HTW. The 3% claim fee leaves the reserve only as part of a successful claim; it is not a standing allowance to extract 3% of all deposited tokens. Market fees and paid progression HTW replenish the reserve, not the revenue wallet. Crafting and repairs that consume materials do not transfer tokens.
 
 ## Trust boundaries and operational risks
 
@@ -72,7 +72,7 @@ The operator can spend funds already received in the revenue accounts. It cannot
 - **Backend key:** losing the configured signing capability can permanently prevent claims from this immutable instance. This contract has no replacement-key or emergency recovery path. A compromised signer can authorize false claims; player signatures alone do not remove that risk because an attacker can control a player wallet.
 - **Backing:** the server reserves recorded liabilities and uncertain payouts before admitting more rewards. Those accounting checks are off-chain. The contract itself sees token balances and the submitted claim, not the full game database.
 - **Availability:** the game, RPC service and signing service must be available. A service outage or an unqualified chain observation can suspend transaction preparation.
-- **Software:** internal automated tests cover signatures, replay, account substitution, fee arithmetic, timing, backing and atomic rollback. Passing tests does not establish that every defect has been found.
+- **Software:** internal automated tests cover signatures, replay, account substitution, fee arithmetic, timing, backing and atomic rollback. The [dated validation record](validation.md) also covers progression locking, payment recovery, crafted-item provenance and first-access names. Passing tests does not establish that every defect has been found.
 - **Markets:** HTW and item values can fall, and buyers may be unavailable. The reserve does not promise a redemption price for boxes, items or externally purchased HTW.
 
 This documentation distinguishes verified deployment facts from application readiness. A finalized reserve deposit does not, by itself, prove public hosting availability or completion of every real-player purchase and withdrawal path.

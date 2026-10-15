@@ -6,6 +6,8 @@
 
 Open the official game entry and connect a supported Solana wallet. Approve the sign-in message to prove wallet ownership. Signing in is free and does not approve purchases. Keep using the same wallet to recover your saved collection.
 
+On first access, choose your player display name before continuing into the game. Use 2–24 letters, numbers, spaces, dots, underscores or hyphens. It appears in your profile, chat and standings, and you can edit it later in Profile. A display name is not a unique login or a replacement for wallet ownership. Existing named profiles are preserved.
+
 The official environment requires wallet entry. A separate playtest may offer guest access or test credits; those saves, balances and receipts do not become official HTW or paid items.
 
 The game never needs your recovery phrase or private key. A purchase or withdrawal has its own transaction review and wallet approval. Check the HTW mint, amount, destinations and SOL fees before signing.
@@ -22,7 +24,7 @@ After initial entry, you can buy more Basic or Five-box packages, or the **500,0
 
 In **Crew**, assign a ready owned character to a parked active car. In **Garage**, manage active and reserve vehicles. Buying an item does not remove its account-level, readiness or equipment requirements. The initial five-pair package has its own starter-access rules; later acquisitions do not automatically unlock every contract.
 
-Open **Operations** and choose a job. The panel shows its level requirement, assigned driver, equipment, internal supply estimates, fuel, condition and preparation requirements. Choose a quiet, balanced or bold strategy. Automatic servicing still handles fuel and condition through the mission flow, using internal supplies and the configured allowance or the game's recovery wait. Manual servicing and changes to the service budget are currently unavailable in the official runtime.
+Open **Operations** and choose a job. The panel shows its level requirement, assigned driver, equipment, internal supply estimates, fuel, condition and preparation requirements. Choose a quiet, balanced or bold strategy. Automatic servicing still handles fuel and condition through the mission flow, using internal supplies and the configured allowance or the game's recovery wait. You can adjust the internal service budget without an HTW payment. For an immediate full refill and repair, park the fleet and review the manual service HTW quote; [see the exact pricing](progression-and-crafting.md#manual-vehicle-service).
 
 Use **Run this job once** to send that car and park after safe return. Use **Start automatic fleet** to repeat eligible saved jobs. You do not steer each vehicle or repeatedly click mission handoffs. The server advances the trip; the city camera shows its presentation.
 
@@ -46,13 +48,13 @@ Camera controls:
 
 Characters have driving, mechanics, stealth and endurance attributes. Vehicles have speed, cargo capacity, stealth, fuel efficiency and durability. Each definition has a contextual perk with a trigger, benefit and trade-off. Match the crew and car to the job instead of relying only on rarity.
 
-Support assignments and base staff provide their displayed contextual effects. Confirm the actual panel requirements before changing an assignment. **Character/vehicle training and garage expansion are currently unavailable in the official runtime.** Their underlying progression systems exist in the game, but no verified official action or payment route for them is available in this version.
+Support assignments and base staff provide their displayed contextual effects. Confirm the actual panel requirements before changing an assignment. Characters and vehicles can be trained through five upgrade levels, and the garage can be expanded through level 6. These actions require an official HTW transaction review. Recall the fleet, turn off automatic operation and wait until every car is parked before preparing an upgrade. [See prices, capacity and recovery](progression-and-crafting.md).
 
-**Weapons & vests** offers six tiers of each item for HTW. New purchases arrive unequipped. Choose the intended driver in Owned gear. **Equipment crafting, equipment repair and consumable crafting are currently unavailable in the official runtime.** Existing material balances or a historical displayed recipe do not make those blocked actions available. Worn heist equipment must currently be replaced through an eligible official equipment purchase; an unavailable repair action cannot restore it. Readiness Kits are cosmetic and do not replace required heist equipment.
+**Weapons & vests** offers six tiers of each item for HTW. New purchases arrive unequipped. Choose the intended driver in Owned gear. Use server-earned materials to craft equipment or supplies and repair eligible owned equipment. Higher equipment tiers also require the specific previous-tier item shown by the recipe. Unequip an item and wait for its mission to finish before repairing, consuming or dismantling it. Newly crafted official items carry gameplay provenance; old test items are not converted into official items. Readiness Kits are cosmetic and do not replace required heist equipment.
 
 Career goals, campaign chapters and weekly objectives track progress and award their stated game resources. These bound supplies and materials are separate from withdrawable HTW. Profiles, standings, referrals and chat are available through their game panels.
 
-The current collection limits are **120 characters**, **100 reserve vehicles**, and a configured active-fleet capacity within **one to six vehicles**. Check the active slots assigned to your account; garage expansion is currently unavailable, so six is a supported ceiling rather than a promise that you can upgrade to it now. They are collection/management limits, not daily box quotas. Leave space for an entire purchased package before approval.
+The current collection limits are **120 characters**, **100 reserve vehicles**, and a configured active-fleet capacity within **one to six vehicles**. Garage upgrades normally provide 1, 2, 3, 4 and 6 active slots at levels 1–5; level 6 improves servicing rather than adding a seventh slot. Check the capacity shown for your account. They are collection/management limits, not daily box quotas. Leave space for an entire purchased package before approval.
 
 ## 6. Understand time and rewards
 
@@ -79,6 +81,7 @@ For a 100,000 HTW gross claim, the reserve pays 97,000 HTW to you and 3,000 HTW 
 | SOL was spent but delivery is pending | Inspect the original signature and use the existing order's status action. Network confirmation and item delivery are separate steps. |
 | A request timed out or you changed wallets | Return to the original wallet and recover its saved order or claim before starting another. |
 | An order needs release | Use the server's check/release action. A local countdown alone cannot prove a payment failed. |
+| A progression purchase keeps the fleet parked | Recover or safely release the original upgrade order. The lock protects the reviewed target; changing your profile name remains available. |
 | A claim is queued for backing | Wait for verified coverage; a new wallet signature cannot create liquidity. |
 | The game reports temporary maintenance | Retry when its chain and service checks recover. Do not send tokens directly to an address as a substitute for a game order. |
 

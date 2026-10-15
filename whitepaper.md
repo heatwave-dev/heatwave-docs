@@ -1,6 +1,6 @@
 # HEATWAVE whitepaper
 
-Version 1.0 · October 15, 2026 · [Documentation home](README.md)
+Version 1.1 · October 15, 2026 · [Documentation home](README.md)
 
 ## Product
 
@@ -10,11 +10,11 @@ The player manages the operation rather than manually steering or shooting. Driv
 
 ## Collection and progression
 
-The collection contains 60 character definitions and 60 vehicle definitions across Common, Uncommon, Rare, Epic, Legendary, Mythic and Exotic. Each has attributes and a contextual effect. Support roles, equipped items and mission choice add decisions beyond acquisition. Character/vehicle training and garage expansion are defined progression systems but are currently blocked in the official runtime, pending verified integration.
+The collection contains 60 character definitions and 60 vehicle definitions across Common, Uncommon, Rare, Epic, Legendary, Mythic and Exotic. Each has attributes and a contextual effect. Support roles, equipped items and mission choice add decisions beyond acquisition. Character and vehicle training and garage expansion use dedicated official HTW orders, exact finalized payment verification and saved upgrade receipts.
 
 Boxes deliver character/car pairs. Basic costs 25,000 HTW and contains only Common items. Five boxes cost 125,000 HTW and draw from all rarities. Premium costs 500,000 HTW and guarantees both items at Epic or higher. The [box specification](boxes-and-rarities.md) publishes exact per-item probabilities, including the 0.035% Mythic and 0.005% Exotic chances, without implying guaranteed returns.
 
-The first entry uses Basic or Five boxes. Later purchases remain available without a daily opening quota, subject to payment recovery and collection space. Current management limits are 120 characters, 100 reserve vehicles and a configured active capacity within one-to-six vehicles. The six-car ceiling does not imply that garage upgrades are available now. Six tiers of weapons and vests are sold separately. Equipment crafting/repair, consumable crafting, manual vehicle servicing and service-budget changes are currently unavailable in the official runtime; no alternative official payment route for these blocked actions is represented as enabled.
+The first entry uses Basic or Five boxes. Later purchases remain available without a daily opening quota, subject to payment recovery and collection space. Current management limits are 120 characters, 100 reserve vehicles and a configured active capacity within one-to-six vehicles. Garage upgrades normally reach six active slots at level 5; level 6 improves servicing. Six tiers of weapons and vests are sold separately. Manual full vehicle servicing also has an official HTW quote. Equipment crafting/repair and consumable crafting use materials, while service-budget changes configure internal resources without a wallet payment. [The progression specification](progression-and-crafting.md) lists the prices and conditions.
 
 Twenty operations cover delivery, recovery, handoff and security encounters. Each has account-level and preparation requirements. Strategy, fuel, condition, heat, equipment and per-vehicle energy affect actual availability. Automatic repetition and up to eight hours of eligible unattended reconciliation do not bypass those requirements.
 
@@ -28,7 +28,7 @@ Eligible mission returns create nominal HTW activity. Published operation tariff
 
 ## Circular payments and fees
 
-Box and equipment HTW purchases flow into the reward reserve. The player Market permits eligible Rare-or-higher items from 250,000 HTW, with no commercial maximum beyond protocol numeric limits. Its 10% fee also goes to the reward reserve; sellers receive 90%.
+Box, equipment and paid progression HTW purchases flow into the reward reserve. The player Market permits eligible Rare-or-higher items from 250,000 HTW, with no commercial maximum beyond protocol numeric limits. Its 10% fee also goes to the reward reserve; sellers receive 90%.
 
 A direct referral earns one free pair after an individual invited player buys at least three physical boxes. The reward occurs once per referred player. Qualified Rare-or-higher referral items may be traded; referrals do not mint withdrawable earnings by themselves.
 
@@ -44,9 +44,9 @@ This design separates ordinary operator revenue from direct access to deposited 
 
 ## Architecture and recovery
 
-Wallet authentication proves account ownership with a signed challenge. Purchase, registration and claim reviews are separate and require their own approval. The client checks wallet identity across asynchronous steps and rejects altered transaction messages. The server records original requests and signatures before broadcasting, then relies on finalized chain observations to reconcile them.
+Wallet authentication proves account ownership with a signed challenge. On first access, new players choose a saved display name; it remains a cosmetic profile field, separate from wallet authority. Purchase, registration and claim reviews are separate and require their own approval. The client checks wallet identity across asynchronous steps and rejects altered transaction messages. The server records original requests and signatures before broadcasting, then relies on finalized chain observations to reconcile them.
 
-An uncertain response is not automatically treated as a failed payment. Recovery uses the original order or claim rather than creating a replacement debit. Stable item provenance and trade receipts connect payment, inventory delivery and later ownership changes. The system does not present a local animation or an HTTP success response as proof of finalized payment.
+An uncertain response is not automatically treated as a failed payment. Recovery uses the original order or claim rather than creating a replacement debit. Stable item provenance and trade receipts connect payment, inventory delivery and later ownership changes. Material crafting records exact server inventory debits and verified ingredients; it uses an explicit gameplay-craft source rather than a synthetic payment receipt. Each qualified consumable unit is linked to one actual mission departure. Newly crafted official gear and supplies preserve mission eligibility under the versioned material policy, without changing published tariffs or allocation rates. Paid progression locks conflicting fleet/inventory actions until fulfillment or proven safe release; status checks and cosmetic profile updates remain available. The system does not present a local animation or an HTTP success response as proof of finalized payment.
 
 ## Current boundaries
 

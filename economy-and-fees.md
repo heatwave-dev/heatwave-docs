@@ -22,6 +22,11 @@ The Rewards panel also separates **reserved earnings**, already allocated to an 
 | Open delivered contents | No new payment | 0 | No transfer |
 | Redeem qualified referral box | Free | 0 | No transfer |
 | Weapon or vest | Listed price below | 0 | Protected reward reserve |
+| Character or vehicle training | 1,000–8,000 per level | 0 | Protected reward reserve |
+| Garage upgrade | 8,000 / 12,000 / 18,000 / 25,000 / 8,000 by step | 0 | Protected reward reserve |
+| Full manual vehicle service | 0.02 per missing fuel point + 0.05 per missing condition point | 0 | Protected reward reserve |
+| Craft or repair with materials | No HTW payment; recipe resources are consumed | 0 | No transfer |
+| Adjust internal service budget | No HTW payment | 0 | No transfer |
 | Buy a Market item | Seller's listed price | 0 | 90% seller; 10% protected reward reserve |
 | Register player for claims | 0 | 0 | No HTW transfer |
 | Withdraw credited earnings | 3% of gross withheld | 0.0025 | 97% player; 3% revenue token account |
@@ -39,7 +44,7 @@ Weapons and vests are sold individually. Account level, item capacity and loadou
 | Masterwork | 8,500 | 10,000 |
 | Signature | 12,000 | 14,000 |
 
-**Currently unavailable in the official runtime:** character/vehicle training, garage expansion, manual vehicle servicing, service-budget changes, equipment crafting, equipment repair and consumable crafting. The server blocks their legacy commands and no verified official alternative route is enabled. Internal resource balances, recipes or historical candidate token prices do not authorize these actions. Automatic mission-management conditions are separate; this notice does not disable the supported dispatch, recall, strategy or assignment controls. Only an official transaction review authorizes an HTW payment.
+Training, garage upgrades and manual servicing use [official progression orders](progression-and-crafting.md): explicit wallet approval, exact finalized payment and one-time fulfillment. Their legacy credit-spending commands remain blocked, so internal supplies cannot bypass HTW settlement. Material crafting and repair instead use canonical server inventories and recorded ingredient origins; they do not trigger a wallet payment or credit HTW.
 
 ## How HTW rewards are allocated
 
@@ -71,7 +76,7 @@ If backing is insufficient, the claim remains queued for funding rather than ask
 
 ## Market rules
 
-The official Market supports eligible characters, vehicles and equipment at **Rare or higher**. Items must have verified official provenance, be owned by the seller, be available for listing and pass their item-specific checks. Paid items, qualified referral items and their subsequent official trades preserve provenance; crafted, bound or playtest items do not become eligible solely because their rarity is high.
+The official Market supports eligible characters, vehicles and equipment at **Rare or higher**. Items must have verified official provenance, be owned by the seller, be available for listing and pass their item-specific checks. Paid items, qualified referral items, newly recorded official material crafts and their subsequent official trades preserve provenance. Crafted equipment must still be unbound and meet the rarity and availability requirements; bound, legacy or playtest items do not become eligible solely because their rarity is high.
 
 The minimum listing is **250,000 HTW**. There is no commercial maximum price, although the amount must fit the token protocol's numeric range. A **10% seller fee** goes to the protected reward reserve; the seller receives 90%. At a 350,000 HTW price, that is 35,000 to the reserve and 315,000 to the seller.
 
@@ -85,4 +90,4 @@ The deployed reserve bytecode and its initialized configuration cannot be edited
 
 Off-chain product availability, game balance, mission tariffs, rarity reward weighting and issuance policy are operated by the game service and can be versioned in future releases. This document is a dated description, not a promise those off-chain rules can never change. Saved transaction reviews remain tied to their original terms.
 
-Sources: official reward policy and allocation (implementation reference: `worker/official-mission-rewards.ts`), claim service (implementation reference: `worker/official-claim-service.ts`), [claim contract](reserve-program.rs), equipment settlement (implementation reference: `worker/official-equipment-settlement.ts`), Market service (implementation reference: `worker/official-market-service.ts`).
+Sources: official reward policy and allocation (implementation reference: `worker/official-mission-rewards.ts`), claim service (implementation reference: `worker/official-claim-service.ts`), [claim contract](reserve-program.rs), equipment settlement (implementation reference: `worker/official-equipment-settlement.ts`), progression settlement (implementation reference: `worker/official-progression-settlement.ts`), material progression (implementation reference: `worker/official-material-progression.ts`), Market service (implementation reference: `worker/official-market-service.ts`).

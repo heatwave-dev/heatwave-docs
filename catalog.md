@@ -2,7 +2,7 @@
 
 [Documentation home](README.md) · Generated from the game definitions reviewed October 15, 2026.
 
-This reference lists definitions, not individually owned items or fixed resale values. Character and vehicle attributes are starting definition values; equipped items and contextual effects can change an operation. Training is currently unavailable in the official runtime. Perk descriptions refer to internal gameplay resources. They are not the HTW payout formula. See [funded reward allocation](economy-and-fees.md#how-htw-rewards-are-allocated).
+This reference lists definitions, not individually owned items or fixed resale values. Character and vehicle attributes are starting definition values; equipped items and contextual effects can change an operation. Official training can improve owned instances through the [paid progression flow](progression-and-crafting.md#character-and-vehicle-training); the table retains the starting values. Perk descriptions refer to internal gameplay resources. They are not the HTW payout formula. See [funded reward allocation](economy-and-fees.md#how-htw-rewards-are-allocated).
 
 ## Characters
 
