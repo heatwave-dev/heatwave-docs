@@ -1,5 +1,8 @@
 # Validation record
 
+> Historical record from October 15, 2026. This page is retained for context, not as the current automatic car-game guide or a claim that these tests cover today's release. For current behavior and costs, read the [live guide](https://heatwave.gg/codex-en.html), [whitepaper](whitepaper.md) and [roadmap](roadmap.md).
+
+
 [Documentation home](README.md) · Local source review, October 15, 2026
 
 This record describes automated checks of the reviewed implementation. It is not an independent security audit, a claim of zero defects, or proof that every real player's wallet and network conditions have been exercised. Production availability is checked separately from the reserve's finalized deployment evidence.

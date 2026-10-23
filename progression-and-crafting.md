@@ -1,5 +1,8 @@
 # Progression and crafting
 
+> Historical record from October 15, 2026. This page is retained for context, not as the current automatic car-game guide or a claim that these tests cover today's release. For current behavior and costs, read the [live guide](https://heatwave.gg/codex-en.html), [whitepaper](whitepaper.md) and [roadmap](roadmap.md).
+
+
 [Documentation home](README.md) · Reviewed October 15, 2026
 
 ## Character and vehicle training

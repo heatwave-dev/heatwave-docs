@@ -1,28 +1,24 @@
 # HEATWAVE documentation
 
-**Build your crew. Explore Sundown Bay. Trade your collection.**
+Reviewed October 23, 2026. HEATWAVE is a Solana browser idle game set in Sundown Bay. Collect cars and manage an automatic fleet of up to 15 active cars. Your collection can contain more than 15 cars.
 
-HEATWAVE is a browser-based 3D fleet-management game by ARCSOVA, a South American studio with Brazilian and international contributors building games and other Web3 products. You prepare drivers, vehicles and equipment; your crews travel, work and return through a simulated coastal city.
+A wallet and confirmed on-chain player registration are required. Paid boxes offer random cars; an eligible player-market car is another route. Delivered cars are game items linked to your account, not a claimed NFT mint.
 
-This is the English public documentation for the official HTW game. It describes the implementation and verified reserve deployment as reviewed on **October 15, 2026**. It does not declare that every hosting environment is online or that an uncompleted transaction succeeded. Historical playtest documents are not the official pricebook.
-
-| Start here | What it covers |
+| Read | Purpose |
 | --- | --- |
-| [Player guide](player-guide.md) | Wallet entry, your first box, assignments, jobs, camera, progression and recovery |
-| [Boxes and rarities](boxes-and-rarities.md) | Exact prices, probabilities, duplicates, referral boxes and collection limits |
-| [Economy and fees](economy-and-fees.md) | Internal supplies, funded rewards, withdrawals, equipment prices and the Market |
-| [Reserve and transparency](reserve-and-transparency.md) | Verified addresses and transactions, immutable code, fee separation and trust assumptions |
-| [Whitepaper](whitepaper.md) | Product architecture, economic design and current boundaries |
-| [Progression and crafting](progression-and-crafting.md) | Training, garage capacity, servicing, material recipes and payment recovery |
-| [Validation record](validation.md) | Dated automated checks and their scope |
-| [Catalog](catalog.md) | All 60 characters, 60 vehicles and 20 operations, generated from game definitions |
+| [Live English game guide](https://heatwave.gg/codex-en.html) | Current gameplay, transaction reviews, fees and withdrawal rules |
+| [Whitepaper](whitepaper.md) | Product, HTW uses, funding, recovery and risks |
+| [Roadmap](roadmap.md) | Available features, the announced October 24 change and milestones awaiting confirmation |
+| [Player guide](player-guide.md) | Getting started and managing your fleet |
+| [Boxes and rarities](boxes-and-rarities.md) | Current reference prices and per-car odds |
+| [Economy and fees](economy-and-fees.md) | Credits, costs and withdrawal conditions |
+| [Reserve and transparency](reserve-and-transparency.md) | Dated deployment evidence and backend trust |
+| [Contract source and build record](contract.md) | Published reserve source, pinned files and verification limits |
 
-The official HTW mint is [`HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump`](https://solscan.io/token/HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump) on Solana Mainnet. Check the full mint address, not only a ticker or logo.
+The official six-decimal HTW mint on Solana Mainnet is [HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump](https://solscan.io/token/HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump). Check the complete address.
 
-The initial protected-reserve deposit was **66,000,000 HTW**. It is a historical deposit, not a live balance or a promise of returns. The reserve page links the transaction and explains which controls are enforced on chain and which depend on the game service. No independent security audit is claimed.
+The live guide and your current transaction review take precedence over older references. Existing trips and saved transactions retain their recorded terms. Activity estimates, game credits and external wallet tokens are separate amounts. None guarantees income, liquidity or a successful withdrawal.
 
-The reviewed official version supports box and equipment purchases, eligible Market trades, mission management, paid training and garage upgrades, manual vehicle servicing, internal service-budget settings, material crafting and equipment repair. New players choose a display name on first access. See [progression and its exact prices](progression-and-crafting.md) and the dated [validation record](validation.md).
+## Historical records
 
-Game resources and pending activity estimates are not wallet tokens. Rarity, gameplay, purchases and referrals do not guarantee income, resale liquidity, token price or recovery of purchase costs.
-
-This public repository includes the [exact reserve contract source and build files](contract.md) and [deployment evidence](reserve-evidence.json). The rest of the game implementation is not included; source paths named in reference pages identify the reviewed implementation, not public links.
+The [October 15 progression reference](progression-and-crafting.md), [legacy catalogue](catalog.md) and [dated validation record](validation.md) remain available for context. They do not describe every feature or rule of the current automatic car game. Original contract source, build files and deployment evidence remain unchanged. Public source and test results are not an independent security audit.

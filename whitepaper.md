@@ -1,57 +1,102 @@
 # HEATWAVE whitepaper
 
-Version 1.1 · October 15, 2026 · [Documentation home](README.md)
+Version 2.0 · October 23, 2026 · [Documentation home](README.md) · [Roadmap](roadmap.md)
 
-## Product
+HEATWAVE is a Solana browser idle game about collecting cars and managing an automatic fleet in Sundown Bay. This document explains the current game, HTW uses, funded credit and transaction recovery. Use the [live English guide](https://heatwave.gg/codex-en.html) and your transaction review for current rules and exact amounts.
 
-HEATWAVE is an autonomous fleet-management game set in Sundown Bay. Its focus is preparing a crew, choosing jobs, managing risk and watching a connected 3D city carry out the plan. ARCSOVA is a South American studio with Brazilian and international contributors working on games and other Web3 products.
+## The fleet you manage
 
-The player manages the operation rather than manually steering or shooting. Drivers board owned vehicles, travel through the city, work at mission locations and return. The browser renders this activity; the game server owns progression and settlement. A cinematic camera, visible traffic, pedestrians, police pursuits and helicopters make the fleet's activity observable.
+You manage the fleet instead of steering each car. Up to 15 ready cars travel, work and return automatically. Rarer ready cars receive priority for the next active slot. Your collection can exceed 15 cars; waiting and recovering cars do not all work simultaneously.
 
-## Collection and progression
+Each departure uses 5% energy, allowing 20 departures from a full battery, subject to the car’s actual state. Outside recovery is free. Garages and the mechanic are optional purchases that change recovery and readiness, not a rarity’s nominal HTW rate. You can own up to five garages; six garage types are choices, not six ownership slots.
 
-The collection contains 60 character definitions and 60 vehicle definitions across Common, Uncommon, Rare, Epic, Legendary, Mythic and Exotic. Each has attributes and a contextual effect. Support roles, equipped items and mission choice add decisions beyond acquisition. Character and vehicle training and garage expansion use dedicated official HTW orders, exact finalized payment verification and saved upgrade receipts.
+With accepted game presence, eligible activity uses the open-game rate. Up to eight hours of eligible away progress use half the current rate. Energy, mission conditions, recorded activity and reserve funding still matter. More cars improve rotation without increasing the 15-car simultaneous work limit.
 
-Boxes deliver character/car pairs. Basic costs 25,000 HTW and contains only Common items. Five boxes cost 125,000 HTW and draw from all rarities. Premium costs 500,000 HTW and guarantees both items at Epic or higher. The [box specification](boxes-and-rarities.md) publishes exact per-item probabilities, including the 0.035% Mythic and 0.005% Exotic chances, without implying guaranteed returns.
+Pause stops new departures while current trips finish. Recall is a separate interruption, not a completed mission. Daily assessment can include eligible recorded work in an open mission without completing it or restoring energy. The game does not reconstruct work the server never recorded.
 
-The first entry uses Basic or Five boxes. Later purchases remain available without a daily opening quota, subject to payment recovery and collection space. Current management limits are 120 characters, 100 reserve vehicles and a configured active capacity within one-to-six vehicles. Garage upgrades normally reach six active slots at level 5; level 6 improves servicing. Six tiers of weapons and vests are sold separately. Manual full vehicle servicing also has an official HTW quote. Equipment crafting/repair and consumable crafting use materials, while service-budget changes configure internal resources without a wallet payment. [The progression specification](progression-and-crafting.md) lists the prices and conditions.
+The October 15 whitepaper described manual crews, character/car pairs and older prices. Those descriptions are historical. Current boxes deliver cars and the current player flow is automatic fleet management.
 
-Twenty operations cover delivery, recovery, handoff and security encounters. Each has account-level and preparation requirements. Strategy, fuel, condition, heat, equipment and per-vehicle energy affect actual availability. Automatic repetition and up to eight hours of eligible unattended reconciliation do not bypass those requirements.
+## Wallet, registration and cars
 
-## Official HTW and internal resources
+Connect a supported Solana wallet and approve the sign-in message to prove ownership. Sign-in is separate from payment and on-chain registration. Keep the same wallet to recover saved orders and your collection.
 
-The official asset is the six-decimal Token-2022 mint [`HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump`](https://solscan.io/token/HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump) on Solana Mainnet.
+Confirmed on-chain registration is required before farming. A new player’s first box purchase includes registration in the same approval, with the SOL account deposit shown. An existing unregistered account activates once separately. HEATWAVE is not presented as a complete free or walletless game.
 
-Internal supplies, materials and XP are distinct from HTW. The official environment does not import playtest balances or convert supplies into redeemable tokens. Paid delivery requires an exact finalized transfer and retains a canonical receipt. Item instances are currently held in the game database and linked to wallet identity; this release does not claim on-chain NFT custody for the collection.
+Paid boxes offer random cars. An eligible player-market car is an alternative when you want a particular listed item. Compare its restrictions and complete review before approving. Delivered cars are recorded game items linked to your account; this release does not claim NFT custody for the collection.
 
-Eligible mission returns create nominal HTW activity. Published operation tariffs, attributes, triggered events and rarity weights determine relative demand. After a UTC day closes, new credits are constrained by a budget of 3% of the free protected reserve after existing obligations and relevant in-flight payments. If demand exceeds the budget, allocations are proportionally reduced. This budget is not a player yield, and pending activity is not a guaranteed receivable.
+Reference offers are:
 
-## Circular payments and fees
+| Offer | HTW reference price | Contents |
+| --- | ---: | --- |
+| Basic | 25,000 | One random car; all seven rarities possible |
+| Five boxes | 125,000 | Five separate random car draws |
+| Premium | 1,000,000 | One random car, Rare or higher |
 
-Box, equipment and paid progression HTW purchases flow into the reward reserve. The player Market permits eligible Rare-or-higher items from 250,000 HTW, with no commercial maximum beyond protocol numeric limits. Its 10% fee also goes to the reward reserve; sellers receive 90%.
+Your review quotes SOL fees, network costs and any registration deposit separately. [Per-car odds](boxes-and-rarities.md) describe probabilities, not returns or cumulative pack guarantees. Recover an uncertain original order instead of paying again.
 
-A direct referral earns one free pair after an individual invited player buys at least three physical boxes. The reward occurs once per referred player. Qualified Rare-or-higher referral items may be traded; referrals do not mint withdrawable earnings by themselves.
+## How HTW is used
 
-Paid box purchases charge 0.0005 SOL per purchase. Claims charge 0.0025 SOL and 3% of gross HTW. Studio fees go to separate revenue accounts. Network fees and applicable account rent are quoted additionally. The [fee reference](economy-and-fees.md) explains the exact destinations and arithmetic.
+HTW is a six-decimal Token-2022 asset on Solana Mainnet. Its official mint is [HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump](https://solscan.io/token/HKrTVBPVF9B8LEkNvZDm4PeNScnvoHv8JxNMTahVpump). A ticker or logo alone does not identify it.
 
-## Protected reserve
+HTW pays for boxes, eligible market purchases and other reviewed game purchases. Credited game-balance HTW can pay for Car Fusion and the Auto-Farm Pass, each with a separate SOL fee. External tokens, pending activity and available game credits are distinct. A fiat conversion is not a guaranteed cash balance or sale price.
 
-The reserve program was made immutable and funded with 66,000,000 HTW on October 15, 2026. Its [public evidence](reserve-and-transparency.md) includes program/configuration/token-account addresses, finalized transaction links and the recorded executable hash. The amount describes the initial deposit, not a continuously updated balance.
+Fusion permanently consumes eligible cars to create one random model of the next rarity:
 
-The program has no direct administrator-withdrawal handler. A claim needs both player and backend signatures, a minimum 100,000 HTW gross, 2,500 HTW already held by the player, seven days since registration for the first claim, fresh backing and a nonreusable claim receipt. It atomically splits gross HTW into 97% to the player and 3% to revenue. The initialized amount limits are the protocol's u64 maximum, and fixed safety retention is zero; these settings remove additional commercial withdrawal ceilings without removing the backing requirement.
+| Input | Output | Game-balance HTW cost |
+| --- | --- | ---: |
+| 8 Common cars | 1 Uncommon car | 50,000 |
+| 4 Uncommon cars | 1 Rare car | 100,000 |
+| 5 Rare cars | 1 Epic car | 300,000 |
+| 3 Epic cars | 1 Legendary car | 750,000 |
 
-This design separates ordinary operator revenue from direct access to deposited reward tokens. **It does not eliminate backend trust.** The backend can authorize false earnings if compromised or operated dishonestly, and the contract cannot independently verify gameplay. The fixed signer has no replacement path in this immutable instance. No independent security audit is claimed.
+Fusion also requires 0.005 SOL. Inputs must be eligible parked cars without a listing, scheduled sale or conflicting assignment. The output is drawn from the next rarity’s ten models. Half the HTW is burned in the game and half returns to the reserve. Mythic and Exotic cars cannot be fused or produced by fusion.
 
-## Architecture and recovery
+The Auto-Farm Pass costs 50,000 credited HTW plus 0.005 SOL for seven days. Twenty percent of its HTW cost is burned in the game and 80% returns to the reserve.
 
-Wallet authentication proves account ownership with a signed challenge. On first access, new players choose a saved display name; it remains a cosmetic profile field, separate from wallet authority. Purchase, registration and claim reviews are separate and require their own approval. The client checks wallet identity across asynchronous steps and rejects altered transaction messages. The server records original requests and signatures before broadcasting, then relies on finalized chain observations to reconcile them.
+The announced departure-rule change starts **October 24, 2026 at 12:00 UTC / 09:00 Brasília**. Until then, existing farming rules apply. Afterwards, without a pass, new trips start only while the game is open. Trips already underway finish under their recorded terms. An open game works with or without a pass. The pass does not remove energy, offline-progress or funding limits.
 
-An uncertain response is not automatically treated as a failed payment. Recovery uses the original order or claim rather than creating a replacement debit. Stable item provenance and trade receipts connect payment, inventory delivery and later ownership changes. Material crafting records exact server inventory debits and verified ingredients; it uses an explicit gameplay-craft source rather than a synthetic payment receipt. Each qualified consumable unit is linked to one actual mission departure. Newly crafted official gear and supplies preserve mission eligibility under the versioned material policy, without changing published tariffs or allocation rates. Paid progression locks conflicting fleet/inventory actions until fulfillment or proven safe release; status checks and cosmetic profile updates remain available. The system does not present a local animation or an HTTP success response as proof of finalized payment.
+## From recorded work to funded credit
 
-## Current boundaries
+The server records eligible work under each trip’s departure terms. Later rate changes apply prospectively; they do not reprice earlier trips or erase confirmed credit. Current account rules and saved reviews determine applicable values.
 
-There is no promise of profit, fixed APY, item resale liquidity or token-price support. Rarity guarantees refer only to box contents. The official withdrawal path pays HTW; a prospective external swap or fiat payout must not be represented as a live feature before its own integration is verified.
+After the relevant UTC day closes, eligible recorded activity enters daily assessment, including eligible work in an open mission. There is no promise of an instant midnight credit or a fixed assessment time.
 
-The game service operates balance, content and product policies. Those off-chain rules can be versioned, whereas the published immutable reserve cannot be rewritten through an administrator control. Future additions must be documented separately from current behavior. Public hosting status, maintenance and completed end-to-end validation are separate from the reserve's deployment evidence.
+New credit depends on reserve coverage and the daily funding budget. The revenue-linked ceiling is 70% of average observed reserve inflows over up to seven settled daily intervals. Demand above the available budget is allocated proportionally. This ceiling is an accounting constraint, not proof of sustainability.
 
-This whitepaper is a product and implementation description. For exact player steps, current fees and system constraints, use the linked guide and reference pages rather than historical design proposals.
+Only the funded allocation becomes confirmed game credit. A partial or zero allocation creates no debt or promise to replenish the difference. A loss known before assessment can reduce the uncredited portion; a later loss does not remove already confirmed credit. Hourly, 24-hour and fiat references are not credited balances or withdrawal promises.
+
+## Withdrawal conditions
+
+Withdrawals pay HTW to the same player’s external Solana wallet. The first-withdrawal wait is seven days from confirmed on-chain player registration, once before the first successful withdrawal. Login and holding do not start that clock. A successful withdrawal does not restart it.
+
+The fixed conditions are:
+
+| Condition | Requirement |
+| --- | --- |
+| Minimum gross request | 100,000 credited HTW |
+| External wallet holding | At least 2,500 HTW in that same wallet before payout |
+| HTW fee | 3% of gross HTW; net token amount is 97% |
+| SOL game fee | 0.0025 SOL |
+| Other SOL costs | Quoted network fee and any applicable account rent |
+
+New requests also have per-request, wallet and global limits. Wallet and global limits use rolling 24-hour windows. The owner-confirmed global ceiling at this review is **10,000,000 HTW across all players**. It can block a request even when that player has made no personal withdrawal. It is not a fixed midnight reset. Check current amounts, remaining allowance and any pause in the withdrawal review. Existing requests retain their admitted terms.
+
+A positive balance, elapsed wait, wallet signature or pending animation is not a successful payout. Credited entitlement, eligibility, holding, backing, limits and network confirmation remain necessary. Observe and recover an uncertain original request before creating another.
+
+## Transaction checks and recovery
+
+The game binds reviews to the authenticated player, wallet, amount, destination and expiry. For new wallet-first withdrawals, it builds and simulates a fresh unsigned transaction before the player’s wallet signs. The game validates the returned transaction and player signature before adding its verifier signature to that exact message. It persists the signed transaction before broadcasting with preflight enabled.
+
+Compatibility with wallet protective assertions is bounded. It does not allow arbitrary transfers, extra spending authority or replacement of the reviewed claim. Fee, simulation, identity, expiry and replay checks remain required. Earlier saved claims retain their recovery path. Deployment or passing tests do not prove that every wallet warning disappeared or every player was paid.
+
+The [published reserve contract](contract.md) requires player and game-verifier signatures and checks accounts, holding, age, amount, backing, expiry and replay. Its upgrade authority was removed on October 15. The recorded initial deposit was 66,000,000 HTW, a historical deposit, not today’s reserve balance. [Deployment evidence](reserve-evidence.json) identifies that snapshot.
+
+The immutable contract and the game’s admission policy are separate layers. Large initialized on-chain numeric ceilings do not disable lower application limits. The server also tracks liabilities and uncertain payouts; a token account balance alone does not reveal all obligations.
+
+## Trust and risks
+
+The backend remains trusted to validate gameplay and authorize credit. A compromised or dishonest backend can authorize fabricated claims, subject to on-chain checks. Removing upgrade authority does not decentralize the server, prove gameplay or guarantee uninterrupted service. Losing the configured signing capability can prevent claims from this immutable instance; it has no replacement-key recovery path.
+
+HTW and item values can fall, and buyers may be unavailable. Purchases, rarity, referrals and gameplay do not guarantee income, liquidity, token-price support or recovery of costs. Game, RPC, wallet and signing-service outages can interrupt transactions. No independent security audit or guarantee of reserve sustainability is claimed.
+
+The [roadmap](roadmap.md) separates available features, an announced scheduled rule and external submissions awaiting confirmation. It promises no additional release dates, exchange approvals or investment returns.

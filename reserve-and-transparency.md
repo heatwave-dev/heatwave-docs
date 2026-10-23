@@ -1,6 +1,6 @@
 # HTW reserve and transparency
 
-[Documentation home](README.md) · Deployment observations: October 15, 2026
+[Documentation home](README.md) · Deployment observations: October 15, 2026 · Application-limit clarification: October 23, 2026
 
 HEATWAVE uses a **program-controlled HTW reward reserve** with separate revenue accounts. The deployed program's upgrade authority was removed, and an initial **66,000,000 HTW** deposit was finalized. The program has no direct administrator-withdrawal instruction. Fees can still reach the separate revenue wallet through the documented payment paths.
 
@@ -47,7 +47,7 @@ The implemented entry points are `initialize`, `register_player` and `claim`. Th
 
 A successful claim requires both the player and the configured backend signature on the complete transaction. The program checks the official mint and canonical accounts, prior registration, seven-day first-claim age, 2,500 HTW pre-payout holding, at least 100,000 HTW gross, claim expiry, replay protection, available gross backing and numeric counters. It sends 97% of gross to the player and 3% to the fixed revenue token account, plus 0.0025 SOL from the player to the revenue wallet.
 
-The initialized per-claim, player-daily, global-daily and lifetime limits are all `18446744073709551615` token atoms (`u64::MAX`); fixed safety retention is `0`. Therefore no lower commercial withdrawal ceiling or retained 6-million reserve floor is configured. Protocol arithmetic is still finite, and a withdrawal needs sufficient backing.
+The initialized per-claim, player-daily, global-daily and lifetime limits are all `18446744073709551615` token atoms (`u64::MAX`); fixed safety retention is `0`. These are the recorded on-chain configuration values, not the current application admission limits. The game also applies per-request, wallet and global limits; wallet and global limits use rolling 24-hour windows. The owner-confirmed global application ceiling on October 23 is 10,000,000 HTW. Check the current withdrawal review for all applicable values and any pause. Existing requests retain their admitted terms. Protocol arithmetic remains finite and sufficient backing is still required.
 
 Removing upgrade authority prevents replacement of this program's executable code through the loader. It does not make the off-chain game server decentralized, validate gameplay automatically, protect token market price or guarantee uninterrupted service.
 
@@ -55,16 +55,16 @@ Removing upgrade authority prevents replacement of this program's executable cod
 
 ```mermaid
 flowchart LR
-  Buyer[Player buying boxes, equipment or upgrades] -->|HTW price| Reserve[Protected HTW reserve]
+  Buyer[Player making an eligible game purchase] -->|HTW price| Reserve[Protected HTW reserve]
   Market[Market purchase] -->|90 percent HTW| Seller[Seller wallet]
   Market -->|10 percent HTW| Reserve
   Reserve -->|97 percent of gross claim| Player[Claiming player]
   Reserve -->|3 percent of gross claim| Revenue[Separate revenue accounts]
-  Buyer -->|0.0005 SOL per paid box purchase| Revenue
+  Buyer -->|Quoted SOL game fee| Revenue
   Player -->|0.0025 SOL per claim| Revenue
 ```
 
-The operator can spend funds already received in the revenue accounts. It cannot use that revenue wallet's private key to directly withdraw the reserve's deposited HTW. The 3% claim fee leaves the reserve only as part of a successful claim; it is not a standing allowance to extract 3% of all deposited tokens. Market fees and paid progression HTW replenish the reserve, not the revenue wallet. Crafting and repairs that consume materials do not transfer tokens.
+The operator can spend funds already received in the revenue accounts. It cannot use that revenue wallet's private key to directly withdraw the reserve's deposited HTW. The 3% claim fee leaves the reserve only as part of a successful claim; it is not a standing allowance to extract 3% of all deposited tokens. Market fees replenish the reserve. Fusion and Auto-Farm Pass game-balance costs have their documented burn/reserve splits and separate SOL fees; see the [current whitepaper](whitepaper.md#how-htw-is-used). Older material crafting references are historical.
 
 ## Trust boundaries and operational risks
 
