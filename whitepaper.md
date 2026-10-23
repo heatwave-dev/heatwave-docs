@@ -1,6 +1,6 @@
 # HEATWAVE whitepaper
 
-Version 2.0 · October 23, 2026 · [Documentation home](README.md) · [Roadmap](roadmap.md)
+Version 2.1 · October 23, 2026 · [Documentation home](README.md) · [Roadmap](roadmap.md)
 
 HEATWAVE is a Solana browser idle game about collecting cars and managing an automatic fleet in Sundown Bay. This document explains the current game, HTW uses, funded credit and transaction recovery. Use the [live English guide](https://heatwave.gg/codex-en.html) and your transaction review for current rules and exact amounts.
 
@@ -79,7 +79,7 @@ The fixed conditions are:
 | SOL game fee | 0.0025 SOL |
 | Other SOL costs | Quoted network fee and any applicable account rent |
 
-New requests also have per-request, wallet and global limits. Wallet and global limits use rolling 24-hour windows. The owner-confirmed global ceiling at this review is **10,000,000 HTW across all players**. It can block a request even when that player has made no personal withdrawal. It is not a fixed midnight reset. Check current amounts, remaining allowance and any pause in the withdrawal review. Existing requests retain their admitted terms.
+New requests have a **500,000 HTW gross maximum per request** and a **1,000,000 HTW gross limit per wallet in rolling 24 hours**. The shared **10,000,000 HTW gross global cap** renews in fixed 24-hour cycles anchored to the first finalized withdrawal, **October 22, 2026 at 18:10:58.224 UTC**. Its daily boundary is **18:10:58 UTC / 15:10:58 Brasília**, not midnight. Prior-cycle finalized withdrawals leave the global count together; unfinished requests carry over and still occupy capacity. This is shared withdrawal capacity, not a daily token grant or payment guarantee. Check current amounts, remaining capacity and any pause in the withdrawal review. Existing requests retain their admitted terms, including the older rolling global policy where recorded.
 
 A positive balance, elapsed wait, wallet signature or pending animation is not a successful payout. Credited entitlement, eligibility, holding, backing, limits and network confirmation remain necessary. Observe and recover an uncertain original request before creating another.
 

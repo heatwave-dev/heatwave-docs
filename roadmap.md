@@ -16,7 +16,9 @@ The current game includes:
 | Optional facilities | Garages and the mechanic for recovery and readiness | [Garages](https://heatwave.gg/codex-en.html#garages) |
 | Car Fusion | Eligible cars consumed for a random model of the next supported rarity | [Fusion costs](whitepaper.md#how-htw-is-used) |
 | Auto-Farm Pass | Seven-day pass purchased with credited HTW plus SOL | [Pass rules](https://heatwave.gg/codex-en.html#farm) |
-| Credits and withdrawals | Funded daily assessment, saved-request recovery and conditional HTW withdrawal | [Earnings](https://heatwave.gg/codex-en.html#gains) |
+| Credits and withdrawals | Funded daily assessment, saved-request recovery and conditional HTW withdrawal; fixed global 24-hour cycles with a separate rolling wallet limit | [Earnings](https://heatwave.gg/codex-en.html#gains) |
+
+The shared 10,000,000 HTW gross cap for new withdrawals renews at 18:10:58 UTC / 15:10:58 Brasília each day, anchored to the first finalized withdrawal on October 22. The 1,000,000 HTW gross wallet limit remains rolling over 24 hours, with up to 500,000 HTW gross per request. Unfinished requests carry over; existing requests keep their admitted terms. Capacity renewal is not a daily token grant or a payment guarantee. See the [withdrawal conditions](economy-and-fees.md#withdrawal-requirements-and-fees).
 
 Wallet-first withdrawal compatibility was deployed on October 23. Real-wallet confirmation that the reported warning disappeared remains separate from deployment. This roadmap does not mark every affected player case as resolved.
 

@@ -52,11 +52,11 @@ The 2,500 HTW holding check is not another token charge. Your wallet also needs 
 
 For example, a gross request of 100,000 HTW has a 3,000 HTW token fee and a 97,000 HTW net amount. SOL costs remain separate. This arithmetic does not prove account eligibility or a completed payment.
 
-## Rolling limits and saved requests
+## Global cycles, wallet limits and saved requests
 
-New requests have per-request, wallet and global limits. Wallet and global limits use rolling 24-hour windows. The owner-confirmed global ceiling on October 23 is 10,000,000 HTW across all players. A shared global allowance can prevent a request from someone who has not withdrawn personally.
+New requests have a 500,000 HTW gross maximum per request and a 1,000,000 HTW gross limit per wallet in rolling 24 hours. The shared global cap is 10,000,000 HTW gross in fixed 24-hour cycles anchored to the first finalized withdrawal, October 22, 2026 at 18:10:58.224 UTC. The daily boundary is 18:10:58 UTC / 15:10:58 Brasília. Prior-cycle finalized withdrawals leave the global count together; unfinished requests carry over and continue occupying capacity. A shared global allowance can prevent a request from someone who has not withdrawn personally.
 
-Check your current review for per-request and wallet amounts, global allowance and any pause. Application limits can be lower than the immutable contract’s initialized numeric ceilings. Rolling limits do not reset at a fixed midnight. No exact reopening time is promised.
+Check your current review for per-request and wallet amounts, global allowance and any pause. Application limits can be lower than the immutable contract’s initialized numeric ceilings. The wallet limit does not reset at midnight or at the global cycle boundary. A renewed global cap grants no tokens and guarantees no payment; sufficient credit, eligibility, backing and fees still apply. Existing requests retain their original admitted terms, including the older rolling global policy where recorded.
 
 Saved requests retain their admitted terms. Observe and recover an uncertain original request. A timeout or one failed attempt does not prove all spending authority expired. A wallet signature or pending screen is not a finalized payout. Do not make a replacement payment to fix an uncertain original transaction.
 
